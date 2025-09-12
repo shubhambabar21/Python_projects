@@ -32,8 +32,8 @@ model = Sequential([
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(X_train_reshaped, y_train, epochs=1, validation_data=(X_test_reshaped, y_test))
-
+model.fit(X_train_reshaped, y_train, epochs=5, validation_data=(X_test_reshaped, y_test))
+#if u kept epochs higher it gives accurate outputs
 test_loss, test_acc = model.evaluate(X_test_reshaped, y_test)
 print(f"Test Accuracy: {test_acc * 100:.2f}%")
 
@@ -48,13 +48,12 @@ plt.title(f"Predicted Digit: {prediction}")
 plt.show()
 
 # Model Summary
-
-# model.summary()
+model.summary()
 
 # Display a sample digit
+plt.imshow(X_train[4], cmap="gray")
+plt.title(f"Label: {y_train[4]}")
+plt.show()
 
-# plt.imshow(X_train[4], cmap="gray")
-# plt.title(f"Label: {y_train[4]}")
-# plt.show()
 
 
