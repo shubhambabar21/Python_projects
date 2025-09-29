@@ -39,17 +39,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-# ratings = load_dataset("movie_ratings.csv")
-# # print(ratings.head())
-#
-# ratings_matrix = ratings.pivot_table(index="user", columns="movie", values="rating").fillna(0)
-# # print(ratings_matrix)
-#
-# user_similarity = calculate_similarity(ratings_matrix)
-# # print(user_similarity)
-#
-# recommendations = recommend_movies(2, ratings_matrix, user_similarity)
-# print("Recommendations for User 1:", recommendations)
+
 
 
 
