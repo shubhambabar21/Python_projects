@@ -58,3 +58,4 @@ print(f"Email: {email}\nPrediction: {predict_email(email)}")
 
 
 
+
